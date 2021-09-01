@@ -1,4 +1,8 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+  <button (click)="check()">click</button>
+<ng-container *ngIf="isOn;then ON ;else OFF"></ng-container>
+<ng-template #ON>
+on
+</ng-template>
+<ng-template #OFF>
+  off
+</ng-template>
